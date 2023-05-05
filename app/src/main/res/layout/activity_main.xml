@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallperp_png"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/bill"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewDisplay2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/amount"
+            android:textColor="@color/material_dynamic_neutral50" />
+
+        <EditText
+            android:id="@+id/editAmount"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="@string/EntAmt"
+            android:inputType="number"
+            android:singleLine="false"
+            android:textColor="@color/black"
+            android:textColorHint="#000000" />
+
+        <TextView
+            android:id="@+id/textViewDisplay3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Num of pax"
+            android:textColor="@color/material_dynamic_neutral50" />
+
+        <EditText
+            android:id="@+id/editNumber"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="0"
+            android:ems="10"
+            android:hint="@string/entNum"
+            android:inputType="number"
+            android:textColorHint="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/toggleButtonSVS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ToggleButton"
+            android:textOff="@string/no_svs"
+            android:textOn="@string/svs" />
+
+        <ToggleButton
+            android:id="@+id/toggleButtonGST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="ToggleButton"
+            android:textOff="@string/no_gst"
+            android:textOn="@string/gst" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewDisplay4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/discount" />
+
+        <EditText
+            android:id="@+id/editDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="@string/entDisc"
+            android:inputType="number"
+            android:textColorHint="#000000" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/radioButtonCash"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonCash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/cash" />
+
+            <RadioButton
+                android:id="@+id/radioButtonPaynow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/paynow" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonSplit"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#D4D5D5"
+            android:text="@string/split"
+            android:textColor="#000000"
+            app:backgroundTint="#D5D6D6" />
+
+        <Button
+            android:id="@+id/buttonReset"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#D4D5D5"
+            android:text="@string/reset"
+            android:textColor="#000000"
+            app:backgroundTint="#D5D6D6" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/displayBill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/total_bill_here"
+            android:textColorHint="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/displayEachPay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/eachperson"
+            android:textColorHint="#000000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>
